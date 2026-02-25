@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashokpickels</title>
+  <style>
+    body{font-family:Arial, sans-serif;margin:0;background:#fff8f0}
+    header{background:#b34700;color:white;padding:20px;text-align:center}
+    h1{margin:0}
+    .container{max-width:1100px;margin:auto;padding:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+    .card{background:white;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);overflow:hidden}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card-body{padding:15px}
+    .price{color:green;font-weight:bold}
+    button{background:#b34700;color:white;border:none;padding:8px 12px;border-radius:5px;cursor:pointer;margin-top:8px}
+    button:hover{background:#8a3600}
+    #cart{background:white;padding:15px;border-radius:10px;margin-top:30px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+    footer{background:#222;color:white;text-align:center;padding:15px;margin-top:30px}
+    .payment{background:white;padding:20px;border-radius:10px;margin-top:30px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+    .payment img{width:220px;margin-top:15px}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ashokpickels</h1>
+  <p>Homemade Veg & Non-Veg Pickles | Small Business (No GST)</p>
+</header>
+
+<div class="container">
+
+<h2>Vegetarian Pickles</h2>
+<div class="grid">
+
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Indian_mango_pickle.jpg">
+  <div class="card-body">
+    <h3>Mango Pickle</h3>
+    <p class="price">₹145 / 250g</p>
+    <button onclick="addToCart('Mango Pickle - ₹145')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Lemon_pickle.jpg">
+  <div class="card-body">
+    <h3>Lemon Pickle</h3>
+    <p class="price">₹140 / 250g</p>
+    <button onclick="addToCart('Lemon Pickle - ₹140')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Garlic_pickle.jpg">
+  <div class="card-body">
+    <h3>Garlic Pickle</h3>
+    <p class="price">₹160 / 250g</p>
+    <button onclick="addToCart('Garlic Pickle - ₹160')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Gongura_pickle.jpg">
+  <div class="card-body">
+    <h3>Gongura Pickle</h3>
+    <p class="price">₹155 / 250g</p>
+    <button onclick="addToCart('Gongura Pickle - ₹155')">Add to Cart</button>
+  </div>
+</div>
+
+</div>
+
+<h2 style="margin-top:40px">Non-Vegetarian Pickles</h2>
+<div class="grid">
+
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Fish_pickle.jpg">
+  <div class="card-body">
+    <h3>Fish Pickle</h3>
+    <p class="price">₹489 / 250g</p>
+    <button onclick="addToCart('Fish Pickle - ₹489')">Add to Cart</button>
+  </div>
+</div>
+
+</div>
+
+<div id="cart">
+  <h2>Your Cart</h2>
+  <ul id="cartItems"></ul>
+  <p><strong>After Payment, Call or WhatsApp: 9014655879</strong></p>
+</div>
+
+<div class="payment">
+  <h2>Scan & Pay</h2>
+  <p><strong>UPI ID:</strong> 9014655879-2@ybl</p>
+  <p>Make payment using PhonePe / Google Pay</p>
+  <img src="Ashokpickels_UPI_QR.png" alt="UPI QR Code">
+  <p>After payment, send screenshot to WhatsApp: <strong>9014655879</strong></p>
+</div>
+
+</div>
+
+<footer>
+  © 2026 Ashokpickels | Contact: 9014655879
+</footer>
+
+<script>
+function addToCart(item){
+  var li = document.createElement("li");
+  li.textContent = item;
+  document.getElementById("cartItems").appendChild(li);
+  alert(item + " added to cart");
+}
+</script>
+
+</body>
+</html>
